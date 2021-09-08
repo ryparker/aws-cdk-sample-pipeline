@@ -1,0 +1,99 @@
+{
+  "version": "13.0.0",
+  "artifacts": {
+    "LambdaWaveStage-LambdaWaveStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "LambdaWaveStage-LambdaWaveStack.template.json",
+        "validateOnSynth": true
+      },
+      "metadata": {
+        "/MyStack/LambdaWaveStage/LambdaWaveStack/MyFunction/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyFunctionServiceRole3C357FF2",
+            "trace": [
+              "new Role (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "new Function (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-lambda/lib/function.js:80:35)",
+              "Object.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/build/js/index.js:34:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/MyStack/LambdaWaveStage/LambdaWaveStack/MyFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyFunction3BAA72D1",
+            "trace": [
+              "new Function (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-lambda/lib/function.js:136:26)",
+              "Object.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/build/js/index.js:34:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/MyStack/LambdaWaveStage/LambdaWaveStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:22:30)",
+              "/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:139:9",
+              "visit (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:200:9)",
+              "visit (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:197:9)",
+              "injectMetadataResources (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:128:5)",
+              "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:17:5)",
+              "Stage.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "Object.pipelineSynth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/private/construct-internals.js:25:18)",
+              "Function.fromStage (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/blueprint/stage-deployment.js:36:48)",
+              "Wave.addStage (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/blueprint/wave.js:40:56)",
+              "Object.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/build/js/index.js:39:6)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/MyStack/LambdaWaveStage/LambdaWaveStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:30:35)",
+              "/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:139:9",
+              "visit (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:200:9)",
+              "visit (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:197:9)",
+              "injectMetadataResources (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:128:5)",
+              "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:17:5)",
+              "Stage.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "Object.pipelineSynth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/private/construct-internals.js:25:18)",
+              "Function.fromStage (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/blueprint/stage-deployment.js:36:48)",
+              "Wave.addStage (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/blueprint/wave.js:40:56)",
+              "Object.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/build/js/index.js:39:6)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ]
+      },
+      "displayName": "MyStack/LambdaWaveStage/LambdaWaveStack"
+    }
+  }
+}

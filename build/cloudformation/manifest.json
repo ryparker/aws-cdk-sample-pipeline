@@ -1,6 +1,13 @@
 {
   "version": "13.0.0",
   "artifacts": {
+    "assembly-MyStack-LambdaWaveStage": {
+      "type": "cdk:cloud-assembly",
+      "properties": {
+        "directoryName": "assembly-MyStack-LambdaWaveStage",
+        "displayName": "MyStack/LambdaWaveStage"
+      }
+    },
     "Tree": {
       "type": "cdk:tree",
       "properties": {
@@ -279,10 +286,230 @@
             ]
           }
         ],
-        "/MyStack/Pipeline/Pipeline/CustomWave/CustomWaveAction/CustomWaveAction/Role/Resource": [
+        "/MyStack/Pipeline/Pipeline/LambdaWaveStage/ManualApproval/CodePipelineActionRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "PipelineCustomWaveCustomWaveActionRoleB8C10429",
+            "data": "PipelineLambdaWaveStageManualApprovalCodePipelineActionRoleD59902CD",
+            "trace": [
+              "new Role (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "Pipeline.getRoleForAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:493:26)",
+              "Pipeline._attachActionToPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:339:33)",
+              "Stage.attachActionToPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:124:31)",
+              "Stage.addAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:71:33)",
+              "Object.produceAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:254:27)",
+              "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:154:48)",
+              "CodePipeline.doBuildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:116:14)",
+              "CodePipeline.buildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:93:14)",
+              "CodePipeline.buildJustInTime (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:101:18)",
+              "Object.visit (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:42:57)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:86:20)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "invokeAspects (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:72:5)",
+              "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
+              "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)"
+            ]
+          }
+        ],
+        "/MyStack/Pipeline/Pipeline/LambdaWaveStage/LambdaWaveStack.Prepare/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineLambdaWaveStageLambdaWaveStackPrepareCodePipelineActionRoleD4A35A99",
+            "trace": [
+              "new Role (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "Pipeline.getRoleForAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:493:26)",
+              "Pipeline._attachActionToPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:339:33)",
+              "Stage.attachActionToPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:124:31)",
+              "Stage.addAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:71:33)",
+              "Object.produceAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:274:23)",
+              "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:154:48)",
+              "CodePipeline.doBuildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:116:14)",
+              "CodePipeline.buildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:93:14)",
+              "CodePipeline.buildJustInTime (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:101:18)",
+              "Object.visit (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:42:57)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:86:20)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "invokeAspects (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:72:5)",
+              "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
+              "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)"
+            ]
+          }
+        ],
+        "/MyStack/Pipeline/Pipeline/LambdaWaveStage/LambdaWaveStack.Prepare/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineLambdaWaveStageLambdaWaveStackPrepareCodePipelineActionRoleDefaultPolicyBC925954",
+            "trace": [
+              "new Policy (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/policy.js:56:26)",
+              "Role.addToPrincipalPolicy (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/role.js:209:34)",
+              "Role.addToPolicy (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/role.js:221:21)",
+              "SingletonPolicy.statementFor (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline-actions/lib/cloudformation/pipeline-actions.js:384:23)",
+              "SingletonPolicy.grantPassRole (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline-actions/lib/cloudformation/pipeline-actions.js:375:14)",
+              "CloudFormationCreateReplaceChangeSetAction.bound (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline-actions/lib/cloudformation/pipeline-actions.js:142:47)",
+              "CloudFormationCreateReplaceChangeSetAction.bound (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline-actions/lib/cloudformation/pipeline-actions.js:204:36)",
+              "CloudFormationCreateReplaceChangeSetAction.bind (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/action.js:104:21)",
+              "RichAction.bind (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/rich-action.js:25:28)",
+              "Pipeline._attachActionToPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:343:41)",
+              "Stage.attachActionToPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:124:31)",
+              "Stage.addAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:71:33)",
+              "Object.produceAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:274:23)",
+              "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:154:48)",
+              "CodePipeline.doBuildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:116:14)",
+              "CodePipeline.buildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:93:14)",
+              "CodePipeline.buildJustInTime (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:101:18)",
+              "Object.visit (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:42:57)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:86:20)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "invokeAspects (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:72:5)",
+              "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
+              "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)"
+            ]
+          }
+        ],
+        "/MyStack/Pipeline/Pipeline/LambdaWaveStage/LambdaWaveStack.Prepare/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineLambdaWaveStageLambdaWaveStackPrepareRole758AEB41",
+            "trace": [
+              "new Role (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "CloudFormationCreateReplaceChangeSetAction.bound (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline-actions/lib/cloudformation/pipeline-actions.js:125:40)",
+              "CloudFormationCreateReplaceChangeSetAction.bound (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline-actions/lib/cloudformation/pipeline-actions.js:204:36)",
+              "CloudFormationCreateReplaceChangeSetAction.bind (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/action.js:104:21)",
+              "RichAction.bind (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/rich-action.js:25:28)",
+              "Pipeline._attachActionToPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:343:41)",
+              "Stage.attachActionToPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:124:31)",
+              "Stage.addAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:71:33)",
+              "Object.produceAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:274:23)",
+              "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:154:48)",
+              "CodePipeline.doBuildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:116:14)",
+              "CodePipeline.buildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:93:14)",
+              "CodePipeline.buildJustInTime (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:101:18)",
+              "Object.visit (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:42:57)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:86:20)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "invokeAspects (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:72:5)",
+              "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
+              "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)"
+            ]
+          }
+        ],
+        "/MyStack/Pipeline/Pipeline/LambdaWaveStage/LambdaWaveStack.Prepare/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineLambdaWaveStageLambdaWaveStackPrepareRoleDefaultPolicy0F0DC5C0",
+            "trace": [
+              "new Policy (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/policy.js:56:26)",
+              "Role.addToPrincipalPolicy (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/role.js:209:34)",
+              "Function.addToPrincipal (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/grant.js:90:65)",
+              "Function.addToPrincipalOrResource (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/grant.js:45:30)",
+              "Bucket.grant (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-s3/lib/bucket.js:445:31)",
+              "Bucket.grantRead (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-s3/lib/bucket.js:264:21)",
+              "CloudFormationCreateReplaceChangeSetAction.bound (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline-actions/lib/cloudformation/pipeline-actions.js:134:28)",
+              "CloudFormationCreateReplaceChangeSetAction.bound (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline-actions/lib/cloudformation/pipeline-actions.js:204:36)",
+              "CloudFormationCreateReplaceChangeSetAction.bind (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/action.js:104:21)",
+              "RichAction.bind (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/rich-action.js:25:28)",
+              "Pipeline._attachActionToPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:343:41)",
+              "Stage.attachActionToPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:124:31)",
+              "Stage.addAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:71:33)",
+              "Object.produceAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:274:23)",
+              "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:154:48)",
+              "CodePipeline.doBuildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:116:14)",
+              "CodePipeline.buildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:93:14)",
+              "CodePipeline.buildJustInTime (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:101:18)",
+              "Object.visit (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:42:57)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:86:20)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "invokeAspects (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:72:5)",
+              "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
+              "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)"
+            ]
+          }
+        ],
+        "/MyStack/Pipeline/Pipeline/LambdaWaveStage/LambdaWaveStack.Deploy/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineLambdaWaveStageLambdaWaveStackDeployCodePipelineActionRoleD7429089",
+            "trace": [
+              "new Role (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "Pipeline.getRoleForAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:493:26)",
+              "Pipeline._attachActionToPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:339:33)",
+              "Stage.attachActionToPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:124:31)",
+              "Stage.addAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:71:33)",
+              "Object.produceAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:299:23)",
+              "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:154:48)",
+              "CodePipeline.doBuildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:116:14)",
+              "CodePipeline.buildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:93:14)",
+              "CodePipeline.buildJustInTime (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:101:18)",
+              "Object.visit (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:42:57)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:86:20)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "invokeAspects (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:72:5)",
+              "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
+              "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)"
+            ]
+          }
+        ],
+        "/MyStack/Pipeline/Pipeline/LambdaWaveStage/LambdaWaveStack.Deploy/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineLambdaWaveStageLambdaWaveStackDeployCodePipelineActionRoleDefaultPolicy16BFD160",
+            "trace": [
+              "new Policy (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/policy.js:56:26)",
+              "Role.addToPrincipalPolicy (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/role.js:209:34)",
+              "Role.addToPolicy (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/role.js:221:21)",
+              "SingletonPolicy.statementFor (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline-actions/lib/cloudformation/pipeline-actions.js:384:23)",
+              "SingletonPolicy.grantExecuteChangeSet (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline-actions/lib/cloudformation/pipeline-actions.js:331:14)",
+              "CloudFormationExecuteChangeSetAction.bound (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline-actions/lib/cloudformation/pipeline-actions.js:71:47)",
+              "CloudFormationExecuteChangeSetAction.bind (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/action.js:104:21)",
+              "RichAction.bind (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/rich-action.js:25:28)",
+              "Pipeline._attachActionToPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:343:41)",
+              "Stage.attachActionToPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:124:31)",
+              "Stage.addAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:71:33)",
+              "Object.produceAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:299:23)",
+              "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:154:48)",
+              "CodePipeline.doBuildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:116:14)",
+              "CodePipeline.buildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:93:14)",
+              "CodePipeline.buildJustInTime (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:101:18)",
+              "Object.visit (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:42:57)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:86:20)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "invokeAspects (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:72:5)",
+              "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
+              "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)"
+            ]
+          }
+        ],
+        "/MyStack/Pipeline/Pipeline/LambdaWaveStage/CustomWaveAction/CustomWaveAction/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineLambdaWaveStageCustomWaveActionRoleC35979CE",
             "trace": [
               "new Role (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
               "new Project (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codebuild/lib/project.js:311:35)",
@@ -306,10 +533,10 @@
             ]
           }
         ],
-        "/MyStack/Pipeline/Pipeline/CustomWave/CustomWaveAction/CustomWaveAction/Role/DefaultPolicy/Resource": [
+        "/MyStack/Pipeline/Pipeline/LambdaWaveStage/CustomWaveAction/CustomWaveAction/Role/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "PipelineCustomWaveCustomWaveActionRoleDefaultPolicy06D4E19C",
+            "data": "PipelineLambdaWaveStageCustomWaveActionRoleDefaultPolicy7753EB85",
             "trace": [
               "new Policy (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/policy.js:56:26)",
               "Role.addToPrincipalPolicy (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/role.js:209:34)",
@@ -335,10 +562,10 @@
             ]
           }
         ],
-        "/MyStack/Pipeline/Pipeline/CustomWave/CustomWaveAction/CustomWaveAction/Resource": [
+        "/MyStack/Pipeline/Pipeline/LambdaWaveStage/CustomWaveAction/CustomWaveAction/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "PipelineCustomWaveCustomWaveAction32E8A501",
+            "data": "PipelineLambdaWaveStageCustomWaveAction5D545A48",
             "trace": [
               "new Project (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codebuild/lib/project.js:353:26)",
               "new PipelineProject (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.js:19:9)",
@@ -361,10 +588,10 @@
             ]
           }
         ],
-        "/MyStack/Pipeline/Pipeline/CustomWave/CustomWaveAction/CodePipelineActionRole/Resource": [
+        "/MyStack/Pipeline/Pipeline/LambdaWaveStage/CustomWaveAction/CodePipelineActionRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "PipelineCustomWaveCustomWaveActionCodePipelineActionRoleE278CE00",
+            "data": "PipelineLambdaWaveStageCustomWaveActionCodePipelineActionRole6AD87533",
             "trace": [
               "new Role (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
               "Pipeline.getRoleForAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:493:26)",
@@ -390,10 +617,10 @@
             ]
           }
         ],
-        "/MyStack/Pipeline/Pipeline/CustomWave/CustomWaveAction/CodePipelineActionRole/DefaultPolicy/Resource": [
+        "/MyStack/Pipeline/Pipeline/LambdaWaveStage/CustomWaveAction/CodePipelineActionRole/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "PipelineCustomWaveCustomWaveActionCodePipelineActionRoleDefaultPolicyADAA511F",
+            "data": "PipelineLambdaWaveStageCustomWaveActionCodePipelineActionRoleDefaultPolicy5C201817",
             "trace": [
               "new Policy (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/policy.js:56:26)",
               "Role.addToPrincipalPolicy (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/role.js:209:34)",
@@ -406,34 +633,6 @@
               "Stage.addAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:71:33)",
               "CodeBuildFactory.produceAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.js:167:15)",
               "Object.produceAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.js:58:40)",
-              "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:154:48)",
-              "CodePipeline.doBuildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:116:14)",
-              "CodePipeline.buildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:93:14)",
-              "CodePipeline.buildJustInTime (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:101:18)",
-              "Object.visit (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:42:57)",
-              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:86:20)",
-              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
-              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
-              "invokeAspects (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:72:5)",
-              "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
-              "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
-              "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
-              "Object.onceWrapper (events.js:421:26)",
-              "process.emit (events.js:314:20)"
-            ]
-          }
-        ],
-        "/MyStack/Pipeline/Pipeline/CustomWave/ManualApproval/CodePipelineActionRole/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "PipelineCustomWaveManualApprovalCodePipelineActionRole58F53EFB",
-            "trace": [
-              "new Role (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
-              "Pipeline.getRoleForAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:493:26)",
-              "Pipeline._attachActionToPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:339:33)",
-              "Stage.attachActionToPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:124:31)",
-              "Stage.addAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:71:33)",
-              "Object.produceAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:254:27)",
               "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:154:48)",
               "CodePipeline.doBuildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:116:14)",
               "CodePipeline.buildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:93:14)",

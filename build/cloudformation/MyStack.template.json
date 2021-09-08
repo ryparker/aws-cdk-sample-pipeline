@@ -98,7 +98,7 @@
               "Effect": "Allow",
               "Resource": {
                 "Fn::GetAtt": [
-                  "PipelineCustomWaveCustomWaveActionCodePipelineActionRoleE278CE00",
+                  "PipelineLambdaWaveStageManualApprovalCodePipelineActionRoleD59902CD",
                   "Arn"
                 ]
               }
@@ -108,7 +108,27 @@
               "Effect": "Allow",
               "Resource": {
                 "Fn::GetAtt": [
-                  "PipelineCustomWaveManualApprovalCodePipelineActionRole58F53EFB",
+                  "PipelineLambdaWaveStageLambdaWaveStackPrepareCodePipelineActionRoleD4A35A99",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "PipelineLambdaWaveStageLambdaWaveStackDeployCodePipelineActionRoleD7429089",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "PipelineLambdaWaveStageCustomWaveActionCodePipelineActionRole6AD87533",
                   "Arn"
                 ]
               }
@@ -204,6 +224,77 @@
             "Actions": [
               {
                 "ActionTypeId": {
+                  "Category": "Approval",
+                  "Owner": "AWS",
+                  "Provider": "Manual",
+                  "Version": "1"
+                },
+                "Name": "ManualApproval",
+                "RoleArn": {
+                  "Fn::GetAtt": [
+                    "PipelineLambdaWaveStageManualApprovalCodePipelineActionRoleD59902CD",
+                    "Arn"
+                  ]
+                },
+                "RunOrder": 1
+              },
+              {
+                "ActionTypeId": {
+                  "Category": "Deploy",
+                  "Owner": "AWS",
+                  "Provider": "CloudFormation",
+                  "Version": "1"
+                },
+                "Configuration": {
+                  "StackName": "LambdaWaveStage-LambdaWaveStack",
+                  "Capabilities": "CAPABILITY_NAMED_IAM,CAPABILITY_AUTO_EXPAND",
+                  "RoleArn": {
+                    "Fn::GetAtt": [
+                      "PipelineLambdaWaveStageLambdaWaveStackPrepareRole758AEB41",
+                      "Arn"
+                    ]
+                  },
+                  "ActionMode": "CHANGE_SET_REPLACE",
+                  "ChangeSetName": "PipelineChange",
+                  "TemplatePath": "Synth_Output::assembly-MyStack-LambdaWaveStage/LambdaWaveStage-LambdaWaveStack.template.json"
+                },
+                "InputArtifacts": [
+                  {
+                    "Name": "Synth_Output"
+                  }
+                ],
+                "Name": "LambdaWaveStack.Prepare",
+                "RoleArn": {
+                  "Fn::GetAtt": [
+                    "PipelineLambdaWaveStageLambdaWaveStackPrepareCodePipelineActionRoleD4A35A99",
+                    "Arn"
+                  ]
+                },
+                "RunOrder": 2
+              },
+              {
+                "ActionTypeId": {
+                  "Category": "Deploy",
+                  "Owner": "AWS",
+                  "Provider": "CloudFormation",
+                  "Version": "1"
+                },
+                "Configuration": {
+                  "StackName": "LambdaWaveStage-LambdaWaveStack",
+                  "ActionMode": "CHANGE_SET_EXECUTE",
+                  "ChangeSetName": "PipelineChange"
+                },
+                "Name": "LambdaWaveStack.Deploy",
+                "RoleArn": {
+                  "Fn::GetAtt": [
+                    "PipelineLambdaWaveStageLambdaWaveStackDeployCodePipelineActionRoleD7429089",
+                    "Arn"
+                  ]
+                },
+                "RunOrder": 3
+              },
+              {
+                "ActionTypeId": {
                   "Category": "Build",
                   "Owner": "AWS",
                   "Provider": "CodeBuild",
@@ -211,7 +302,7 @@
                 },
                 "Configuration": {
                   "ProjectName": {
-                    "Ref": "PipelineCustomWaveCustomWaveAction32E8A501"
+                    "Ref": "PipelineLambdaWaveStageCustomWaveAction5D545A48"
                   }
                 },
                 "InputArtifacts": [
@@ -222,30 +313,14 @@
                 "Name": "CustomWaveAction",
                 "RoleArn": {
                   "Fn::GetAtt": [
-                    "PipelineCustomWaveCustomWaveActionCodePipelineActionRoleE278CE00",
+                    "PipelineLambdaWaveStageCustomWaveActionCodePipelineActionRole6AD87533",
                     "Arn"
                   ]
                 },
-                "RunOrder": 1
-              },
-              {
-                "ActionTypeId": {
-                  "Category": "Approval",
-                  "Owner": "AWS",
-                  "Provider": "Manual",
-                  "Version": "1"
-                },
-                "Name": "ManualApproval",
-                "RoleArn": {
-                  "Fn::GetAtt": [
-                    "PipelineCustomWaveManualApprovalCodePipelineActionRole58F53EFB",
-                    "Arn"
-                  ]
-                },
-                "RunOrder": 1
+                "RunOrder": 4
               }
             ],
-            "Name": "CustomWave"
+            "Name": "LambdaWaveStage"
           }
         ],
         "ArtifactStore": {
@@ -472,7 +547,7 @@
           ]
         },
         "Source": {
-          "BuildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"build\": {\n      \"commands\": [\n        \"yarn install\"\n      ]\n    }\n  },\n  \"artifacts\": {\n    \"base-directory\": \"build/cloudformation\",\n    \"files\": \"**/*\"\n  }\n}",
+          "BuildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"build\": {\n      \"commands\": [\n        \"yarn install\",\n        \"yarn build\"\n      ]\n    }\n  },\n  \"artifacts\": {\n    \"base-directory\": \"build/cloudformation\",\n    \"files\": \"**/*\"\n  }\n}",
           "Type": "CODEPIPELINE"
         },
         "EncryptionKey": "alias/aws/s3"
@@ -549,7 +624,331 @@
         "aws:cdk:path": "MyStack/Pipeline/Pipeline/Build/Synth/CodePipelineActionRole/DefaultPolicy/Resource"
       }
     },
-    "PipelineCustomWaveCustomWaveActionRoleB8C10429": {
+    "PipelineLambdaWaveStageManualApprovalCodePipelineActionRoleD59902CD": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition"
+                      },
+                      ":iam::",
+                      {
+                        "Ref": "AWS::AccountId"
+                      },
+                      ":root"
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "MyStack/Pipeline/Pipeline/LambdaWaveStage/ManualApproval/CodePipelineActionRole/Resource"
+      }
+    },
+    "PipelineLambdaWaveStageLambdaWaveStackPrepareCodePipelineActionRoleD4A35A99": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition"
+                      },
+                      ":iam::",
+                      {
+                        "Ref": "AWS::AccountId"
+                      },
+                      ":root"
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "MyStack/Pipeline/Pipeline/LambdaWaveStage/LambdaWaveStack.Prepare/CodePipelineActionRole/Resource"
+      }
+    },
+    "PipelineLambdaWaveStageLambdaWaveStackPrepareCodePipelineActionRoleDefaultPolicyBC925954": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "iam:PassRole",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "PipelineLambdaWaveStageLambdaWaveStackPrepareRole758AEB41",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Action": [
+                "s3:GetObject*",
+                "s3:GetBucket*",
+                "s3:List*"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "PipelineArtifactsBucketAEA9A052",
+                    "Arn"
+                  ]
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "PipelineArtifactsBucketAEA9A052",
+                          "Arn"
+                        ]
+                      },
+                      "/*"
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "Action": [
+                "cloudformation:CreateChangeSet",
+                "cloudformation:DeleteChangeSet",
+                "cloudformation:DescribeChangeSet",
+                "cloudformation:DescribeStacks"
+              ],
+              "Condition": {
+                "StringEqualsIfExists": {
+                  "cloudformation:ChangeSetName": "PipelineChange"
+                }
+              },
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    "arn:",
+                    {
+                      "Ref": "AWS::Partition"
+                    },
+                    ":cloudformation:",
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    ":",
+                    {
+                      "Ref": "AWS::AccountId"
+                    },
+                    ":stack/LambdaWaveStage-LambdaWaveStack/*"
+                  ]
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "PipelineLambdaWaveStageLambdaWaveStackPrepareCodePipelineActionRoleDefaultPolicyBC925954",
+        "Roles": [
+          {
+            "Ref": "PipelineLambdaWaveStageLambdaWaveStackPrepareCodePipelineActionRoleD4A35A99"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "MyStack/Pipeline/Pipeline/LambdaWaveStage/LambdaWaveStack.Prepare/CodePipelineActionRole/DefaultPolicy/Resource"
+      }
+    },
+    "PipelineLambdaWaveStageLambdaWaveStackPrepareRole758AEB41": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "cloudformation.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "MyStack/Pipeline/Pipeline/LambdaWaveStage/LambdaWaveStack.Prepare/Role/Resource"
+      }
+    },
+    "PipelineLambdaWaveStageLambdaWaveStackPrepareRoleDefaultPolicy0F0DC5C0": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "s3:GetObject*",
+                "s3:GetBucket*",
+                "s3:List*"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "PipelineArtifactsBucketAEA9A052",
+                    "Arn"
+                  ]
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "PipelineArtifactsBucketAEA9A052",
+                          "Arn"
+                        ]
+                      },
+                      "/*"
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "Action": "*",
+              "Effect": "Allow",
+              "Resource": "*"
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "PipelineLambdaWaveStageLambdaWaveStackPrepareRoleDefaultPolicy0F0DC5C0",
+        "Roles": [
+          {
+            "Ref": "PipelineLambdaWaveStageLambdaWaveStackPrepareRole758AEB41"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "MyStack/Pipeline/Pipeline/LambdaWaveStage/LambdaWaveStack.Prepare/Role/DefaultPolicy/Resource"
+      }
+    },
+    "PipelineLambdaWaveStageLambdaWaveStackDeployCodePipelineActionRoleD7429089": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition"
+                      },
+                      ":iam::",
+                      {
+                        "Ref": "AWS::AccountId"
+                      },
+                      ":root"
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "MyStack/Pipeline/Pipeline/LambdaWaveStage/LambdaWaveStack.Deploy/CodePipelineActionRole/Resource"
+      }
+    },
+    "PipelineLambdaWaveStageLambdaWaveStackDeployCodePipelineActionRoleDefaultPolicy16BFD160": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "cloudformation:DescribeChangeSet",
+                "cloudformation:DescribeStacks",
+                "cloudformation:ExecuteChangeSet"
+              ],
+              "Condition": {
+                "StringEqualsIfExists": {
+                  "cloudformation:ChangeSetName": "PipelineChange"
+                }
+              },
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    "arn:",
+                    {
+                      "Ref": "AWS::Partition"
+                    },
+                    ":cloudformation:",
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    ":",
+                    {
+                      "Ref": "AWS::AccountId"
+                    },
+                    ":stack/LambdaWaveStage-LambdaWaveStack/*"
+                  ]
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "PipelineLambdaWaveStageLambdaWaveStackDeployCodePipelineActionRoleDefaultPolicy16BFD160",
+        "Roles": [
+          {
+            "Ref": "PipelineLambdaWaveStageLambdaWaveStackDeployCodePipelineActionRoleD7429089"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "MyStack/Pipeline/Pipeline/LambdaWaveStage/LambdaWaveStack.Deploy/CodePipelineActionRole/DefaultPolicy/Resource"
+      }
+    },
+    "PipelineLambdaWaveStageCustomWaveActionRoleC35979CE": {
       "Type": "AWS::IAM::Role",
       "Properties": {
         "AssumeRolePolicyDocument": {
@@ -566,10 +965,10 @@
         }
       },
       "Metadata": {
-        "aws:cdk:path": "MyStack/Pipeline/Pipeline/CustomWave/CustomWaveAction/CustomWaveAction/Role/Resource"
+        "aws:cdk:path": "MyStack/Pipeline/Pipeline/LambdaWaveStage/CustomWaveAction/CustomWaveAction/Role/Resource"
       }
     },
-    "PipelineCustomWaveCustomWaveActionRoleDefaultPolicy06D4E19C": {
+    "PipelineLambdaWaveStageCustomWaveActionRoleDefaultPolicy7753EB85": {
       "Type": "AWS::IAM::Policy",
       "Properties": {
         "PolicyDocument": {
@@ -600,7 +999,7 @@
                       },
                       ":log-group:/aws/codebuild/",
                       {
-                        "Ref": "PipelineCustomWaveCustomWaveAction32E8A501"
+                        "Ref": "PipelineLambdaWaveStageCustomWaveAction5D545A48"
                       }
                     ]
                   ]
@@ -623,7 +1022,7 @@
                       },
                       ":log-group:/aws/codebuild/",
                       {
-                        "Ref": "PipelineCustomWaveCustomWaveAction32E8A501"
+                        "Ref": "PipelineLambdaWaveStageCustomWaveAction5D545A48"
                       },
                       ":*"
                     ]
@@ -658,7 +1057,7 @@
                     },
                     ":report-group/",
                     {
-                      "Ref": "PipelineCustomWaveCustomWaveAction32E8A501"
+                      "Ref": "PipelineLambdaWaveStageCustomWaveAction5D545A48"
                     },
                     "-*"
                   ]
@@ -698,18 +1097,18 @@
           ],
           "Version": "2012-10-17"
         },
-        "PolicyName": "PipelineCustomWaveCustomWaveActionRoleDefaultPolicy06D4E19C",
+        "PolicyName": "PipelineLambdaWaveStageCustomWaveActionRoleDefaultPolicy7753EB85",
         "Roles": [
           {
-            "Ref": "PipelineCustomWaveCustomWaveActionRoleB8C10429"
+            "Ref": "PipelineLambdaWaveStageCustomWaveActionRoleC35979CE"
           }
         ]
       },
       "Metadata": {
-        "aws:cdk:path": "MyStack/Pipeline/Pipeline/CustomWave/CustomWaveAction/CustomWaveAction/Role/DefaultPolicy/Resource"
+        "aws:cdk:path": "MyStack/Pipeline/Pipeline/LambdaWaveStage/CustomWaveAction/CustomWaveAction/Role/DefaultPolicy/Resource"
       }
     },
-    "PipelineCustomWaveCustomWaveAction32E8A501": {
+    "PipelineLambdaWaveStageCustomWaveAction5D545A48": {
       "Type": "AWS::CodeBuild::Project",
       "Properties": {
         "Artifacts": {
@@ -724,7 +1123,7 @@
         },
         "ServiceRole": {
           "Fn::GetAtt": [
-            "PipelineCustomWaveCustomWaveActionRoleB8C10429",
+            "PipelineLambdaWaveStageCustomWaveActionRoleC35979CE",
             "Arn"
           ]
         },
@@ -736,10 +1135,10 @@
         "Name": "CustomWaveActionBuild"
       },
       "Metadata": {
-        "aws:cdk:path": "MyStack/Pipeline/Pipeline/CustomWave/CustomWaveAction/CustomWaveAction/Resource"
+        "aws:cdk:path": "MyStack/Pipeline/Pipeline/LambdaWaveStage/CustomWaveAction/CustomWaveAction/Resource"
       }
     },
-    "PipelineCustomWaveCustomWaveActionCodePipelineActionRoleE278CE00": {
+    "PipelineLambdaWaveStageCustomWaveActionCodePipelineActionRole6AD87533": {
       "Type": "AWS::IAM::Role",
       "Properties": {
         "AssumeRolePolicyDocument": {
@@ -771,10 +1170,10 @@
         }
       },
       "Metadata": {
-        "aws:cdk:path": "MyStack/Pipeline/Pipeline/CustomWave/CustomWaveAction/CodePipelineActionRole/Resource"
+        "aws:cdk:path": "MyStack/Pipeline/Pipeline/LambdaWaveStage/CustomWaveAction/CodePipelineActionRole/Resource"
       }
     },
-    "PipelineCustomWaveCustomWaveActionCodePipelineActionRoleDefaultPolicyADAA511F": {
+    "PipelineLambdaWaveStageCustomWaveActionCodePipelineActionRoleDefaultPolicy5C201817": {
       "Type": "AWS::IAM::Policy",
       "Properties": {
         "PolicyDocument": {
@@ -788,7 +1187,7 @@
               "Effect": "Allow",
               "Resource": {
                 "Fn::GetAtt": [
-                  "PipelineCustomWaveCustomWaveAction32E8A501",
+                  "PipelineLambdaWaveStageCustomWaveAction5D545A48",
                   "Arn"
                 ]
               }
@@ -796,50 +1195,15 @@
           ],
           "Version": "2012-10-17"
         },
-        "PolicyName": "PipelineCustomWaveCustomWaveActionCodePipelineActionRoleDefaultPolicyADAA511F",
+        "PolicyName": "PipelineLambdaWaveStageCustomWaveActionCodePipelineActionRoleDefaultPolicy5C201817",
         "Roles": [
           {
-            "Ref": "PipelineCustomWaveCustomWaveActionCodePipelineActionRoleE278CE00"
+            "Ref": "PipelineLambdaWaveStageCustomWaveActionCodePipelineActionRole6AD87533"
           }
         ]
       },
       "Metadata": {
-        "aws:cdk:path": "MyStack/Pipeline/Pipeline/CustomWave/CustomWaveAction/CodePipelineActionRole/DefaultPolicy/Resource"
-      }
-    },
-    "PipelineCustomWaveManualApprovalCodePipelineActionRole58F53EFB": {
-      "Type": "AWS::IAM::Role",
-      "Properties": {
-        "AssumeRolePolicyDocument": {
-          "Statement": [
-            {
-              "Action": "sts:AssumeRole",
-              "Effect": "Allow",
-              "Principal": {
-                "AWS": {
-                  "Fn::Join": [
-                    "",
-                    [
-                      "arn:",
-                      {
-                        "Ref": "AWS::Partition"
-                      },
-                      ":iam::",
-                      {
-                        "Ref": "AWS::AccountId"
-                      },
-                      ":root"
-                    ]
-                  ]
-                }
-              }
-            }
-          ],
-          "Version": "2012-10-17"
-        }
-      },
-      "Metadata": {
-        "aws:cdk:path": "MyStack/Pipeline/Pipeline/CustomWave/ManualApproval/CodePipelineActionRole/Resource"
+        "aws:cdk:path": "MyStack/Pipeline/Pipeline/LambdaWaveStage/CustomWaveAction/CodePipelineActionRole/DefaultPolicy/Resource"
       }
     },
     "CDKMetadata": {
