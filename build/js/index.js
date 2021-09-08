@@ -6,11 +6,13 @@ var app = new core_1.App();
 var stack = new core_1.Stack(app, "MyStack");
 var pipeline = new pipelines_1.CodePipeline(stack, "Pipeline", {
     pipelineName: "MyPipeline",
+    selfMutation: false,
     synth: new pipelines_1.ShellStep('Synth', {
         input: pipelines_1.CodePipelineSource.gitHub('ryparker/aws-cdk-sample-pipeline', 'main'),
         commands: [
             'yarn install',
         ],
+        primaryOutputDirectory: 'build/cloudformation',
     }),
 });
 pipeline.addWave('CustomWave', {

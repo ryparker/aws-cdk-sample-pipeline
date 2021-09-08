@@ -6,6 +6,7 @@ const stack = new Stack(app, "MyStack");
 
 const pipeline = new CodePipeline(stack, "Pipeline", {
   pipelineName: "MyPipeline",
+  selfMutation: false,
   synth: new ShellStep('Synth', {
     input: CodePipelineSource.gitHub('ryparker/aws-cdk-sample-pipeline', 'main'),
     commands: [

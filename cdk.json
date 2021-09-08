@@ -1,5 +1,7 @@
 {
   "app": "build/js/index.js",
   "output": "build/cloudformation",
-  "contexts": {}
+  "contexts": {
+    "@aws-cdk/core:newStyleStackSynthesis": true
+  }
 }
