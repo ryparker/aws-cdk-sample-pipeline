@@ -30,8 +30,8 @@ const wave = pipeline.addWave('LambdaWave', {
     })],
 });
 
-const lambdaStage = new Stage(stack, 'LambdaWaveStage');
-const lambdaStack = new Stack(lambdaStage, 'LambdaWaveStack');
+const lambdaStage = new Stage(stack, 'LambdaStage');
+const lambdaStack = new Stack(lambdaStage, 'lambdaStack');
 new Function(lambdaStack, 'MyFunction', {
   code: Code.fromInline('console.log("hello world");'),
   runtime: Runtime.NODEJS_14_X,
