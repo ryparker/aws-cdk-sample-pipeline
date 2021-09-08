@@ -19,7 +19,7 @@ const pipeline = new CodePipeline(stack, "Pipeline", {
   }),
 });
 
-const wave = pipeline.addWave('CustomWave', {
+const wave = pipeline.addWave('LambdaWave', {
   pre: [new ManualApprovalStep('ManualApproval')],
   post: [
     new CodeBuildStep('CustomWaveAction', {
@@ -31,8 +31,8 @@ const wave = pipeline.addWave('CustomWave', {
 });
 
 const lambdaStage = new Stage(stack, 'LambdaWaveStage');
-const lambdaStageStack = new Stack(lambdaStage, 'LambdaWaveStack');
-new Function(lambdaStageStack, 'MyFunction', {
+const lambdaStack = new Stack(lambdaStage, 'LambdaWaveStack');
+new Function(lambdaStack, 'MyFunction', {
   code: Code.fromInline('console.log("hello world");'),
   runtime: Runtime.NODEJS_14_X,
   handler: 'index.handler',
