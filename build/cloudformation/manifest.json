@@ -1,0 +1,638 @@
+{
+  "version": "13.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "MyStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "MyStack.template.json",
+        "validateOnSynth": false
+      },
+      "metadata": {
+        "/MyStack/Pipeline/Pipeline/ArtifactsBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineArtifactsBucketAEA9A052",
+            "trace": [
+              "new Bucket (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-s3/lib/bucket.js:589:26)",
+              "new Pipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:200:27)",
+              "CodePipeline.doBuildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:103:30)",
+              "CodePipeline.buildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:93:14)",
+              "CodePipeline.buildJustInTime (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:101:18)",
+              "Object.visit (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:42:57)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:86:20)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "invokeAspects (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:72:5)",
+              "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
+              "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
+              "Object.onceWrapper (node:events:514:26)",
+              "process.emit (node:events:394:28)"
+            ]
+          }
+        ],
+        "/MyStack/Pipeline/Pipeline/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineRoleB27FAA37",
+            "trace": [
+              "new Role (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "new Pipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:210:35)",
+              "CodePipeline.doBuildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:103:30)",
+              "CodePipeline.buildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:93:14)",
+              "CodePipeline.buildJustInTime (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:101:18)",
+              "Object.visit (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:42:57)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:86:20)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "invokeAspects (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:72:5)",
+              "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
+              "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
+              "Object.onceWrapper (node:events:514:26)",
+              "process.emit (node:events:394:28)"
+            ]
+          }
+        ],
+        "/MyStack/Pipeline/Pipeline/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineRoleDefaultPolicy7BDC1ABB",
+            "trace": [
+              "new Policy (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/policy.js:56:26)",
+              "Role.addToPrincipalPolicy (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/role.js:209:34)",
+              "Function.addToPrincipal (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/grant.js:90:65)",
+              "Function.addToPrincipalOrResource (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/grant.js:45:30)",
+              "Bucket.grant (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-s3/lib/bucket.js:445:31)",
+              "Bucket.grantReadWrite (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-s3/lib/bucket.js:340:21)",
+              "new Pipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:223:29)",
+              "CodePipeline.doBuildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:103:30)",
+              "CodePipeline.buildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:93:14)",
+              "CodePipeline.buildJustInTime (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:101:18)",
+              "Object.visit (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:42:57)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:86:20)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "invokeAspects (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:72:5)",
+              "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
+              "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
+              "Object.onceWrapper (node:events:514:26)",
+              "process.emit (node:events:394:28)"
+            ]
+          }
+        ],
+        "/MyStack/Pipeline/Pipeline/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Pipeline9850B417",
+            "trace": [
+              "new Pipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:213:30)",
+              "CodePipeline.doBuildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:103:30)",
+              "CodePipeline.buildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:93:14)",
+              "CodePipeline.buildJustInTime (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:101:18)",
+              "Object.visit (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:42:57)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:86:20)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "invokeAspects (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:72:5)",
+              "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
+              "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
+              "Object.onceWrapper (node:events:514:26)",
+              "process.emit (node:events:394:28)"
+            ]
+          }
+        ],
+        "/MyStack/Pipeline/Pipeline/Source/USACounts_infrastructure-cdk/WebhookResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineSourceUSACountsinfrastructurecdkWebhookResourceF869CF2A",
+            "trace": [
+              "GitHubSourceAction.bound (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline-actions/lib/github/source-action.js:63:13)",
+              "GitHubSourceAction.bind (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/action.js:104:21)",
+              "RichAction.bind (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/rich-action.js:25:28)",
+              "Pipeline._attachActionToPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:343:41)",
+              "Stage.attachActionToPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:124:31)",
+              "Stage.addAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:71:33)",
+              "GitHubSource.produceAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline-source.js:115:15)",
+              "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:154:48)",
+              "CodePipeline.doBuildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:116:14)",
+              "CodePipeline.buildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:93:14)",
+              "CodePipeline.buildJustInTime (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:101:18)",
+              "Object.visit (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:42:57)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:86:20)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "invokeAspects (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:72:5)",
+              "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
+              "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
+              "Object.onceWrapper (node:events:514:26)",
+              "process.emit (node:events:394:28)"
+            ]
+          }
+        ],
+        "/MyStack/Pipeline/Pipeline/Build/Synth/CdkBuildProject/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineBuildSynthCdkBuildProjectRole231EEA2A",
+            "trace": [
+              "new Role (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "new Project (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codebuild/lib/project.js:311:35)",
+              "new PipelineProject (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.js:19:9)",
+              "CodeBuildFactory.produceAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.js:145:25)",
+              "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:154:48)",
+              "CodePipeline.doBuildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:116:14)",
+              "CodePipeline.buildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:93:14)",
+              "CodePipeline.buildJustInTime (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:101:18)",
+              "Object.visit (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:42:57)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:86:20)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "invokeAspects (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:72:5)",
+              "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
+              "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
+              "Object.onceWrapper (node:events:514:26)",
+              "process.emit (node:events:394:28)"
+            ]
+          }
+        ],
+        "/MyStack/Pipeline/Pipeline/Build/Synth/CdkBuildProject/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineBuildSynthCdkBuildProjectRoleDefaultPolicyFB6C941C",
+            "trace": [
+              "new Policy (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/policy.js:56:26)",
+              "Role.addToPrincipalPolicy (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/role.js:209:34)",
+              "PipelineProject.addToRolePolicy (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codebuild/lib/project.js:60:23)",
+              "new Project (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codebuild/lib/project.js:396:14)",
+              "new PipelineProject (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.js:19:9)",
+              "CodeBuildFactory.produceAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.js:145:25)",
+              "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:154:48)",
+              "CodePipeline.doBuildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:116:14)",
+              "CodePipeline.buildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:93:14)",
+              "CodePipeline.buildJustInTime (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:101:18)",
+              "Object.visit (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:42:57)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:86:20)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "invokeAspects (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:72:5)",
+              "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
+              "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
+              "Object.onceWrapper (node:events:514:26)",
+              "process.emit (node:events:394:28)"
+            ]
+          }
+        ],
+        "/MyStack/Pipeline/Pipeline/Build/Synth/CdkBuildProject/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineBuildSynthCdkBuildProject6BEFA8E6",
+            "trace": [
+              "new Project (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codebuild/lib/project.js:353:26)",
+              "new PipelineProject (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.js:19:9)",
+              "CodeBuildFactory.produceAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.js:145:25)",
+              "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:154:48)",
+              "CodePipeline.doBuildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:116:14)",
+              "CodePipeline.buildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:93:14)",
+              "CodePipeline.buildJustInTime (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:101:18)",
+              "Object.visit (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:42:57)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:86:20)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "invokeAspects (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:72:5)",
+              "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
+              "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
+              "Object.onceWrapper (node:events:514:26)",
+              "process.emit (node:events:394:28)"
+            ]
+          }
+        ],
+        "/MyStack/Pipeline/Pipeline/Build/Synth/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineBuildSynthCodePipelineActionRole4E7A6C97",
+            "trace": [
+              "new Role (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "Pipeline.getRoleForAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:493:26)",
+              "Pipeline._attachActionToPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:339:33)",
+              "Stage.attachActionToPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:124:31)",
+              "Stage.addAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:71:33)",
+              "CodeBuildFactory.produceAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.js:167:15)",
+              "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:154:48)",
+              "CodePipeline.doBuildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:116:14)",
+              "CodePipeline.buildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:93:14)",
+              "CodePipeline.buildJustInTime (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:101:18)",
+              "Object.visit (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:42:57)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:86:20)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "invokeAspects (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:72:5)",
+              "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
+              "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
+              "Object.onceWrapper (node:events:514:26)",
+              "process.emit (node:events:394:28)"
+            ]
+          }
+        ],
+        "/MyStack/Pipeline/Pipeline/Build/Synth/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineBuildSynthCodePipelineActionRoleDefaultPolicy92C90290",
+            "trace": [
+              "new Policy (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/policy.js:56:26)",
+              "Role.addToPrincipalPolicy (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/role.js:209:34)",
+              "Role.addToPolicy (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/role.js:221:21)",
+              "CodeBuildAction.bound (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline-actions/lib/codebuild/build-action.js:78:22)",
+              "CodeBuildAction.bind (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/action.js:104:21)",
+              "RichAction.bind (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/rich-action.js:25:28)",
+              "Pipeline._attachActionToPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:343:41)",
+              "Stage.attachActionToPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:124:31)",
+              "Stage.addAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:71:33)",
+              "CodeBuildFactory.produceAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.js:167:15)",
+              "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:154:48)",
+              "CodePipeline.doBuildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:116:14)",
+              "CodePipeline.buildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:93:14)",
+              "CodePipeline.buildJustInTime (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:101:18)",
+              "Object.visit (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:42:57)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:86:20)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "invokeAspects (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:72:5)",
+              "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
+              "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
+              "Object.onceWrapper (node:events:514:26)",
+              "process.emit (node:events:394:28)"
+            ]
+          }
+        ],
+        "/MyStack/Pipeline/Pipeline/UpdatePipeline/SelfMutate/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineUpdatePipelineSelfMutateCodePipelineActionRoleD6D4E5CF",
+            "trace": [
+              "new Role (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "Pipeline.getRoleForAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:493:26)",
+              "Pipeline._attachActionToPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:339:33)",
+              "Stage.attachActionToPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:124:31)",
+              "Stage.addAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:71:33)",
+              "CodeBuildFactory.produceAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.js:167:15)",
+              "Object.produceAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.js:58:40)",
+              "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:154:48)",
+              "CodePipeline.doBuildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:116:14)",
+              "CodePipeline.buildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:93:14)",
+              "CodePipeline.buildJustInTime (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:101:18)",
+              "Object.visit (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:42:57)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:86:20)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "invokeAspects (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:72:5)",
+              "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
+              "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
+              "Object.onceWrapper (node:events:514:26)",
+              "process.emit (node:events:394:28)"
+            ]
+          }
+        ],
+        "/MyStack/Pipeline/Pipeline/UpdatePipeline/SelfMutate/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineUpdatePipelineSelfMutateCodePipelineActionRoleDefaultPolicyE626265B",
+            "trace": [
+              "new Policy (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/policy.js:56:26)",
+              "Role.addToPrincipalPolicy (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/role.js:209:34)",
+              "Role.addToPolicy (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/role.js:221:21)",
+              "CodeBuildAction.bound (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline-actions/lib/codebuild/build-action.js:78:22)",
+              "CodeBuildAction.bind (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/action.js:104:21)",
+              "RichAction.bind (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/rich-action.js:25:28)",
+              "Pipeline._attachActionToPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:343:41)",
+              "Stage.attachActionToPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:124:31)",
+              "Stage.addAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:71:33)",
+              "CodeBuildFactory.produceAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.js:167:15)",
+              "Object.produceAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.js:58:40)",
+              "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:154:48)",
+              "CodePipeline.doBuildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:116:14)",
+              "CodePipeline.buildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:93:14)",
+              "CodePipeline.buildJustInTime (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:101:18)",
+              "Object.visit (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:42:57)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:86:20)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "invokeAspects (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:72:5)",
+              "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
+              "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
+              "Object.onceWrapper (node:events:514:26)",
+              "process.emit (node:events:394:28)"
+            ]
+          }
+        ],
+        "/MyStack/Pipeline/Pipeline/CustomWave/CustomWaveAction/CustomWaveAction/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineCustomWaveCustomWaveActionRoleB8C10429",
+            "trace": [
+              "new Role (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "new Project (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codebuild/lib/project.js:311:35)",
+              "new PipelineProject (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.js:19:9)",
+              "CodeBuildFactory.produceAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.js:145:25)",
+              "Object.produceAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.js:58:40)",
+              "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:154:48)",
+              "CodePipeline.doBuildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:116:14)",
+              "CodePipeline.buildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:93:14)",
+              "CodePipeline.buildJustInTime (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:101:18)",
+              "Object.visit (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:42:57)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:86:20)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "invokeAspects (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:72:5)",
+              "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
+              "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
+              "Object.onceWrapper (node:events:514:26)",
+              "process.emit (node:events:394:28)"
+            ]
+          }
+        ],
+        "/MyStack/Pipeline/Pipeline/CustomWave/CustomWaveAction/CustomWaveAction/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineCustomWaveCustomWaveActionRoleDefaultPolicy06D4E19C",
+            "trace": [
+              "new Policy (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/policy.js:56:26)",
+              "Role.addToPrincipalPolicy (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/role.js:209:34)",
+              "PipelineProject.addToRolePolicy (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codebuild/lib/project.js:60:23)",
+              "new Project (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codebuild/lib/project.js:396:14)",
+              "new PipelineProject (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.js:19:9)",
+              "CodeBuildFactory.produceAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.js:145:25)",
+              "Object.produceAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.js:58:40)",
+              "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:154:48)",
+              "CodePipeline.doBuildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:116:14)",
+              "CodePipeline.buildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:93:14)",
+              "CodePipeline.buildJustInTime (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:101:18)",
+              "Object.visit (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:42:57)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:86:20)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "invokeAspects (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:72:5)",
+              "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
+              "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
+              "Object.onceWrapper (node:events:514:26)",
+              "process.emit (node:events:394:28)"
+            ]
+          }
+        ],
+        "/MyStack/Pipeline/Pipeline/CustomWave/CustomWaveAction/CustomWaveAction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineCustomWaveCustomWaveAction32E8A501",
+            "trace": [
+              "new Project (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codebuild/lib/project.js:353:26)",
+              "new PipelineProject (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.js:19:9)",
+              "CodeBuildFactory.produceAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.js:145:25)",
+              "Object.produceAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.js:58:40)",
+              "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:154:48)",
+              "CodePipeline.doBuildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:116:14)",
+              "CodePipeline.buildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:93:14)",
+              "CodePipeline.buildJustInTime (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:101:18)",
+              "Object.visit (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:42:57)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:86:20)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "invokeAspects (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:72:5)",
+              "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
+              "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
+              "Object.onceWrapper (node:events:514:26)",
+              "process.emit (node:events:394:28)"
+            ]
+          }
+        ],
+        "/MyStack/Pipeline/Pipeline/CustomWave/CustomWaveAction/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineCustomWaveCustomWaveActionCodePipelineActionRoleE278CE00",
+            "trace": [
+              "new Role (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "Pipeline.getRoleForAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:493:26)",
+              "Pipeline._attachActionToPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:339:33)",
+              "Stage.attachActionToPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:124:31)",
+              "Stage.addAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:71:33)",
+              "CodeBuildFactory.produceAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.js:167:15)",
+              "Object.produceAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.js:58:40)",
+              "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:154:48)",
+              "CodePipeline.doBuildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:116:14)",
+              "CodePipeline.buildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:93:14)",
+              "CodePipeline.buildJustInTime (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:101:18)",
+              "Object.visit (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:42:57)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:86:20)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "invokeAspects (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:72:5)",
+              "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
+              "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
+              "Object.onceWrapper (node:events:514:26)",
+              "process.emit (node:events:394:28)"
+            ]
+          }
+        ],
+        "/MyStack/Pipeline/Pipeline/CustomWave/CustomWaveAction/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineCustomWaveCustomWaveActionCodePipelineActionRoleDefaultPolicyADAA511F",
+            "trace": [
+              "new Policy (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/policy.js:56:26)",
+              "Role.addToPrincipalPolicy (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/role.js:209:34)",
+              "Role.addToPolicy (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/role.js:221:21)",
+              "CodeBuildAction.bound (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline-actions/lib/codebuild/build-action.js:78:22)",
+              "CodeBuildAction.bind (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/action.js:104:21)",
+              "RichAction.bind (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/rich-action.js:25:28)",
+              "Pipeline._attachActionToPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:343:41)",
+              "Stage.attachActionToPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:124:31)",
+              "Stage.addAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:71:33)",
+              "CodeBuildFactory.produceAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.js:167:15)",
+              "Object.produceAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.js:58:40)",
+              "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:154:48)",
+              "CodePipeline.doBuildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:116:14)",
+              "CodePipeline.buildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:93:14)",
+              "CodePipeline.buildJustInTime (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:101:18)",
+              "Object.visit (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:42:57)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:86:20)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "invokeAspects (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:72:5)",
+              "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
+              "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
+              "Object.onceWrapper (node:events:514:26)",
+              "process.emit (node:events:394:28)"
+            ]
+          }
+        ],
+        "/MyStack/Pipeline/Pipeline/CustomWave/ManualApproval/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineCustomWaveManualApprovalCodePipelineActionRole58F53EFB",
+            "trace": [
+              "new Role (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "Pipeline.getRoleForAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:493:26)",
+              "Pipeline._attachActionToPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:339:33)",
+              "Stage.attachActionToPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:124:31)",
+              "Stage.addAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:71:33)",
+              "Object.produceAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:254:27)",
+              "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:154:48)",
+              "CodePipeline.doBuildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:116:14)",
+              "CodePipeline.buildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:93:14)",
+              "CodePipeline.buildJustInTime (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:101:18)",
+              "Object.visit (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:42:57)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:86:20)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "invokeAspects (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:72:5)",
+              "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
+              "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
+              "Object.onceWrapper (node:events:514:26)",
+              "process.emit (node:events:394:28)"
+            ]
+          }
+        ],
+        "/MyStack/Pipeline/UpdatePipeline/SelfMutation/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineUpdatePipelineSelfMutationRole57E559E8",
+            "trace": [
+              "new Role (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "new Project (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codebuild/lib/project.js:311:35)",
+              "new PipelineProject (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.js:19:9)",
+              "CodeBuildFactory.produceAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.js:145:25)",
+              "Object.produceAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.js:58:40)",
+              "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:154:48)",
+              "CodePipeline.doBuildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:116:14)",
+              "CodePipeline.buildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:93:14)",
+              "CodePipeline.buildJustInTime (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:101:18)",
+              "Object.visit (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:42:57)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:86:20)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "invokeAspects (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:72:5)",
+              "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
+              "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
+              "Object.onceWrapper (node:events:514:26)",
+              "process.emit (node:events:394:28)"
+            ]
+          }
+        ],
+        "/MyStack/Pipeline/UpdatePipeline/SelfMutation/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineUpdatePipelineSelfMutationRoleDefaultPolicyA225DA4E",
+            "trace": [
+              "new Policy (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/policy.js:56:26)",
+              "Role.addToPrincipalPolicy (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-iam/lib/role.js:209:34)",
+              "PipelineProject.addToRolePolicy (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codebuild/lib/project.js:60:23)",
+              "new Project (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codebuild/lib/project.js:396:14)",
+              "new PipelineProject (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.js:19:9)",
+              "CodeBuildFactory.produceAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.js:145:25)",
+              "Object.produceAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.js:58:40)",
+              "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:154:48)",
+              "CodePipeline.doBuildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:116:14)",
+              "CodePipeline.buildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:93:14)",
+              "CodePipeline.buildJustInTime (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:101:18)",
+              "Object.visit (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:42:57)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:86:20)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "invokeAspects (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:72:5)",
+              "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
+              "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
+              "Object.onceWrapper (node:events:514:26)",
+              "process.emit (node:events:394:28)"
+            ]
+          }
+        ],
+        "/MyStack/Pipeline/UpdatePipeline/SelfMutation/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineUpdatePipelineSelfMutationDAA41400",
+            "trace": [
+              "new Project (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codebuild/lib/project.js:353:26)",
+              "new PipelineProject (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.js:19:9)",
+              "CodeBuildFactory.produceAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.js:145:25)",
+              "Object.produceAction (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.js:58:40)",
+              "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:154:48)",
+              "CodePipeline.doBuildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.js:116:14)",
+              "CodePipeline.buildPipeline (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:93:14)",
+              "CodePipeline.buildJustInTime (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:101:18)",
+              "Object.visit (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.js:42:57)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:86:20)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "recurse (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "invokeAspects (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:72:5)",
+              "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
+              "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
+              "Object.onceWrapper (node:events:514:26)",
+              "process.emit (node:events:394:28)"
+            ]
+          }
+        ],
+        "/MyStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:22:30)",
+              "/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:139:9",
+              "visit (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:200:9)",
+              "visit (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:197:9)",
+              "injectMetadataResources (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:128:5)",
+              "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:17:5)",
+              "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
+              "Object.onceWrapper (node:events:514:26)",
+              "process.emit (node:events:394:28)"
+            ]
+          }
+        ],
+        "/MyStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:30:35)",
+              "/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:139:9",
+              "visit (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:200:9)",
+              "visit (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:197:9)",
+              "injectMetadataResources (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:128:5)",
+              "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:17:5)",
+              "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
+              "Object.onceWrapper (node:events:514:26)",
+              "process.emit (node:events:394:28)"
+            ]
+          }
+        ]
+      },
+      "displayName": "MyStack"
+    }
+  }
+}
