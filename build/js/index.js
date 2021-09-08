@@ -7,10 +7,9 @@ var stack = new core_1.Stack(app, "MyStack");
 var pipeline = new pipelines_1.CodePipeline(stack, "Pipeline", {
     pipelineName: "MyPipeline",
     synth: new pipelines_1.ShellStep('Synth', {
-        input: pipelines_1.CodePipelineSource.gitHub('USACounts/infrastructure-cdk', 'main'),
+        input: pipelines_1.CodePipelineSource.gitHub('ryparker/aws-cdk-sample-pipeline', 'main'),
         commands: [
             'yarn install',
-            'yarn build'
         ],
     }),
 });

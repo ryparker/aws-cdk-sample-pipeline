@@ -11,6 +11,7 @@ const pipeline = new CodePipeline(stack, "Pipeline", {
     commands: [
       'yarn install',
     ],
+    primaryOutputDirectory: 'build/cloudformation',
   }),
 });
 

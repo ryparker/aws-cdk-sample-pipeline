@@ -33,8 +33,8 @@
               "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
               "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
               "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
-              "Object.onceWrapper (node:events:514:26)",
-              "process.emit (node:events:394:28)"
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)"
             ]
           }
         ],
@@ -56,8 +56,8 @@
               "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
               "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
               "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
-              "Object.onceWrapper (node:events:514:26)",
-              "process.emit (node:events:394:28)"
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)"
             ]
           }
         ],
@@ -84,8 +84,8 @@
               "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
               "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
               "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
-              "Object.onceWrapper (node:events:514:26)",
-              "process.emit (node:events:394:28)"
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)"
             ]
           }
         ],
@@ -106,15 +106,15 @@
               "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
               "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
               "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
-              "Object.onceWrapper (node:events:514:26)",
-              "process.emit (node:events:394:28)"
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)"
             ]
           }
         ],
-        "/MyStack/Pipeline/Pipeline/Source/USACounts_infrastructure-cdk/WebhookResource": [
+        "/MyStack/Pipeline/Pipeline/Source/ryparker_aws-cdk-sample-pipeline/WebhookResource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "PipelineSourceUSACountsinfrastructurecdkWebhookResourceF869CF2A",
+            "data": "PipelineSourceryparkerawscdksamplepipelineWebhookResourceD44935D4",
             "trace": [
               "GitHubSourceAction.bound (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline-actions/lib/github/source-action.js:63:13)",
               "GitHubSourceAction.bind (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/aws-codepipeline/lib/action.js:104:21)",
@@ -135,8 +135,8 @@
               "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
               "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
               "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
-              "Object.onceWrapper (node:events:514:26)",
-              "process.emit (node:events:394:28)"
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)"
             ]
           }
         ],
@@ -161,8 +161,8 @@
               "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
               "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
               "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
-              "Object.onceWrapper (node:events:514:26)",
-              "process.emit (node:events:394:28)"
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)"
             ]
           }
         ],
@@ -189,8 +189,8 @@
               "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
               "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
               "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
-              "Object.onceWrapper (node:events:514:26)",
-              "process.emit (node:events:394:28)"
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)"
             ]
           }
         ],
@@ -214,8 +214,8 @@
               "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
               "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
               "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
-              "Object.onceWrapper (node:events:514:26)",
-              "process.emit (node:events:394:28)"
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)"
             ]
           }
         ],
@@ -242,8 +242,8 @@
               "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
               "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
               "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
-              "Object.onceWrapper (node:events:514:26)",
-              "process.emit (node:events:394:28)"
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)"
             ]
           }
         ],
@@ -274,8 +274,8 @@
               "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
               "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
               "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
-              "Object.onceWrapper (node:events:514:26)",
-              "process.emit (node:events:394:28)"
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)"
             ]
           }
         ],
@@ -303,8 +303,8 @@
               "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
               "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
               "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
-              "Object.onceWrapper (node:events:514:26)",
-              "process.emit (node:events:394:28)"
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)"
             ]
           }
         ],
@@ -336,8 +336,8 @@
               "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
               "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
               "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
-              "Object.onceWrapper (node:events:514:26)",
-              "process.emit (node:events:394:28)"
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)"
             ]
           }
         ],
@@ -363,8 +363,8 @@
               "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
               "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
               "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
-              "Object.onceWrapper (node:events:514:26)",
-              "process.emit (node:events:394:28)"
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)"
             ]
           }
         ],
@@ -392,8 +392,8 @@
               "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
               "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
               "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
-              "Object.onceWrapper (node:events:514:26)",
-              "process.emit (node:events:394:28)"
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)"
             ]
           }
         ],
@@ -418,8 +418,8 @@
               "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
               "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
               "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
-              "Object.onceWrapper (node:events:514:26)",
-              "process.emit (node:events:394:28)"
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)"
             ]
           }
         ],
@@ -447,8 +447,8 @@
               "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
               "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
               "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
-              "Object.onceWrapper (node:events:514:26)",
-              "process.emit (node:events:394:28)"
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)"
             ]
           }
         ],
@@ -480,8 +480,8 @@
               "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
               "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
               "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
-              "Object.onceWrapper (node:events:514:26)",
-              "process.emit (node:events:394:28)"
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)"
             ]
           }
         ],
@@ -508,8 +508,8 @@
               "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
               "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
               "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
-              "Object.onceWrapper (node:events:514:26)",
-              "process.emit (node:events:394:28)"
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)"
             ]
           }
         ],
@@ -535,8 +535,8 @@
               "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
               "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
               "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
-              "Object.onceWrapper (node:events:514:26)",
-              "process.emit (node:events:394:28)"
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)"
             ]
           }
         ],
@@ -564,8 +564,8 @@
               "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
               "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
               "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
-              "Object.onceWrapper (node:events:514:26)",
-              "process.emit (node:events:394:28)"
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)"
             ]
           }
         ],
@@ -590,8 +590,8 @@
               "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
               "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
               "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
-              "Object.onceWrapper (node:events:514:26)",
-              "process.emit (node:events:394:28)"
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)"
             ]
           }
         ],
@@ -608,8 +608,8 @@
               "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:17:5)",
               "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
               "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
-              "Object.onceWrapper (node:events:514:26)",
-              "process.emit (node:events:394:28)"
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)"
             ]
           }
         ],
@@ -626,8 +626,8 @@
               "Object.synthesize (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/private/synthesis.js:17:5)",
               "App.synth (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
               "process.<anonymous> (/Users/ryanparker/Documents/GitHub/aws-cdk-sample-project/node_modules/@aws-cdk/core/lib/app.js:51:51)",
-              "Object.onceWrapper (node:events:514:26)",
-              "process.emit (node:events:394:28)"
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)"
             ]
           }
         ]

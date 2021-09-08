@@ -157,16 +157,16 @@
                   "Version": "1"
                 },
                 "Configuration": {
-                  "Owner": "USACounts",
-                  "Repo": "infrastructure-cdk",
+                  "Owner": "ryparker",
+                  "Repo": "aws-cdk-sample-pipeline",
                   "Branch": "main",
                   "OAuthToken": "{{resolve:secretsmanager:github-token:SecretString:::}}",
                   "PollForSourceChanges": false
                 },
-                "Name": "USACounts_infrastructure-cdk",
+                "Name": "ryparker_aws-cdk-sample-pipeline",
                 "OutputArtifacts": [
                   {
-                    "Name": "USACounts_infrastructure_cdk_Source"
+                    "Name": "ryparker_aws_cdk_sample_pipeline_Source"
                   }
                 ],
                 "RunOrder": 1
@@ -187,11 +187,11 @@
                   "ProjectName": {
                     "Ref": "PipelineBuildSynthCdkBuildProject6BEFA8E6"
                   },
-                  "EnvironmentVariables": "[{\"name\":\"_PROJECT_CONFIG_HASH\",\"type\":\"PLAINTEXT\",\"value\":\"1cc2e600a226c0aab7a5aef2ef476c0c01eefd1cd9e38e45b8f710380ac5888d\"}]"
+                  "EnvironmentVariables": "[{\"name\":\"_PROJECT_CONFIG_HASH\",\"type\":\"PLAINTEXT\",\"value\":\"82750568ada84f522123c570bd3aa63deab7a342269728127d98fe18f6ee140a\"}]"
                 },
                 "InputArtifacts": [
                   {
-                    "Name": "USACounts_infrastructure_cdk_Source"
+                    "Name": "ryparker_aws_cdk_sample_pipeline_Source"
                   }
                 ],
                 "Name": "Synth",
@@ -259,7 +259,7 @@
                 },
                 "InputArtifacts": [
                   {
-                    "Name": "USACounts_infrastructure_cdk_Source"
+                    "Name": "ryparker_aws_cdk_sample_pipeline_Source"
                   }
                 ],
                 "Name": "CustomWaveAction",
@@ -308,7 +308,7 @@
         "aws:cdk:path": "MyStack/Pipeline/Pipeline/Resource"
       }
     },
-    "PipelineSourceUSACountsinfrastructurecdkWebhookResourceF869CF2A": {
+    "PipelineSourceryparkerawscdksamplepipelineWebhookResourceD44935D4": {
       "Type": "AWS::CodePipeline::Webhook",
       "Properties": {
         "Authentication": "GITHUB_HMAC",
@@ -321,7 +321,7 @@
             "MatchEquals": "refs/heads/{Branch}"
           }
         ],
-        "TargetAction": "USACounts_infrastructure-cdk",
+        "TargetAction": "ryparker_aws-cdk-sample-pipeline",
         "TargetPipeline": {
           "Ref": "Pipeline9850B417"
         },
@@ -329,7 +329,7 @@
         "RegisterWithThirdParty": true
       },
       "Metadata": {
-        "aws:cdk:path": "MyStack/Pipeline/Pipeline/Source/USACounts_infrastructure-cdk/WebhookResource"
+        "aws:cdk:path": "MyStack/Pipeline/Pipeline/Source/ryparker_aws-cdk-sample-pipeline/WebhookResource"
       }
     },
     "PipelineBuildSynthCdkBuildProjectRole231EEA2A": {
@@ -515,7 +515,7 @@
           ]
         },
         "Source": {
-          "BuildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"build\": {\n      \"commands\": [\n        \"yarn install\",\n        \"yarn build\"\n      ]\n    }\n  },\n  \"artifacts\": {\n    \"base-directory\": \"cdk.out\",\n    \"files\": \"**/*\"\n  }\n}",
+          "BuildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"build\": {\n      \"commands\": [\n        \"yarn install\"\n      ]\n    }\n  },\n  \"artifacts\": {\n    \"base-directory\": \"cdk.out\",\n    \"files\": \"**/*\"\n  }\n}",
           "Type": "CODEPIPELINE"
         },
         "EncryptionKey": "alias/aws/s3"
@@ -1181,7 +1181,7 @@
     "CDKMetadata": {
       "Type": "AWS::CDK::Metadata",
       "Properties": {
-        "Analytics": "v2:deflate64:H4sIAAAAAAAA/02OyQ7CMAxEv6X3YGiROCP6A1U5cG4TI9wlrrKAUJR/p03ZTvOsGc04h7zIYZcdm4fdSNVvg2SDEM6ukb0oWVtnvHSivOoaLXsjceHZUOSIdRQTTTiQRgslK6zel1j65i6FHx/C15sL/vmC7Y25j8LuIZy87DHtrRQFNSOEmoeUTVrxQPKZahJFsQy1ngb1W6kMd7h+/sYYo9BzEDq7vecHOECRdZZoY7x2NCLUq74A5y8UiRQBAAA="
+        "Analytics": "v2:deflate64:H4sIAAAAAAAA/02PSw7CMAxEz8I+uLRcANELVGXBuk2McD9xlQ8IRbk7bVo+Kz9rRjN2DnmRw2F3ap52L1WfBckGIVxcI3tRsrbOeOlEedM1WvZG4sKzoMgR6ygmmnAgjRZKVlhtm1jy5iyFHx3CV5sD/vmK7Z25j8IeIZy97DH1rRQFNSOEmofkTbPigeQrxSSKYilqPQ3q11IZ7nC9fMMYo9CzETqbPfIC0uOdJdobrx2NCPU638uSgFIVAQAA"
       },
       "Metadata": {
         "aws:cdk:path": "MyStack/CDKMetadata/Default"

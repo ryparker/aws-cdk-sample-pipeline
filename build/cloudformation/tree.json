@@ -229,10 +229,10 @@
                             "name": "Source",
                             "actions": [
                               {
-                                "name": "USACounts_infrastructure-cdk",
+                                "name": "ryparker_aws-cdk-sample-pipeline",
                                 "outputArtifacts": [
                                   {
-                                    "name": "USACounts_infrastructure_cdk_Source"
+                                    "name": "ryparker_aws_cdk_sample_pipeline_Source"
                                   }
                                 ],
                                 "actionTypeId": {
@@ -242,8 +242,8 @@
                                   "provider": "GitHub"
                                 },
                                 "configuration": {
-                                  "Owner": "USACounts",
-                                  "Repo": "infrastructure-cdk",
+                                  "Owner": "ryparker",
+                                  "Repo": "aws-cdk-sample-pipeline",
                                   "Branch": "main",
                                   "OAuthToken": "{{resolve:secretsmanager:github-token:SecretString:::}}",
                                   "PollForSourceChanges": false
@@ -259,7 +259,7 @@
                                 "name": "Synth",
                                 "inputArtifacts": [
                                   {
-                                    "name": "USACounts_infrastructure_cdk_Source"
+                                    "name": "ryparker_aws_cdk_sample_pipeline_Source"
                                   }
                                 ],
                                 "outputArtifacts": [
@@ -277,7 +277,7 @@
                                   "ProjectName": {
                                     "Ref": "PipelineBuildSynthCdkBuildProject6BEFA8E6"
                                   },
-                                  "EnvironmentVariables": "[{\"name\":\"_PROJECT_CONFIG_HASH\",\"type\":\"PLAINTEXT\",\"value\":\"1cc2e600a226c0aab7a5aef2ef476c0c01eefd1cd9e38e45b8f710380ac5888d\"}]"
+                                  "EnvironmentVariables": "[{\"name\":\"_PROJECT_CONFIG_HASH\",\"type\":\"PLAINTEXT\",\"value\":\"82750568ada84f522123c570bd3aa63deab7a342269728127d98fe18f6ee140a\"}]"
                                 },
                                 "runOrder": 1,
                                 "roleArn": {
@@ -328,7 +328,7 @@
                                 "name": "CustomWaveAction",
                                 "inputArtifacts": [
                                   {
-                                    "name": "USACounts_infrastructure_cdk_Source"
+                                    "name": "ryparker_aws_cdk_sample_pipeline_Source"
                                   }
                                 ],
                                 "actionTypeId": {
@@ -388,13 +388,13 @@
                     "id": "Source",
                     "path": "MyStack/Pipeline/Pipeline/Source",
                     "children": {
-                      "USACounts_infrastructure-cdk": {
-                        "id": "USACounts_infrastructure-cdk",
-                        "path": "MyStack/Pipeline/Pipeline/Source/USACounts_infrastructure-cdk",
+                      "ryparker_aws-cdk-sample-pipeline": {
+                        "id": "ryparker_aws-cdk-sample-pipeline",
+                        "path": "MyStack/Pipeline/Pipeline/Source/ryparker_aws-cdk-sample-pipeline",
                         "children": {
                           "WebhookResource": {
                             "id": "WebhookResource",
-                            "path": "MyStack/Pipeline/Pipeline/Source/USACounts_infrastructure-cdk/WebhookResource",
+                            "path": "MyStack/Pipeline/Pipeline/Source/ryparker_aws-cdk-sample-pipeline/WebhookResource",
                             "attributes": {
                               "aws:cdk:cloudformation:type": "AWS::CodePipeline::Webhook",
                               "aws:cdk:cloudformation:props": {
@@ -408,7 +408,7 @@
                                     "matchEquals": "refs/heads/{Branch}"
                                   }
                                 ],
-                                "targetAction": "USACounts_infrastructure-cdk",
+                                "targetAction": "ryparker_aws-cdk-sample-pipeline",
                                 "targetPipeline": {
                                   "Ref": "Pipeline9850B417"
                                 },
@@ -662,7 +662,7 @@
                                     },
                                     "source": {
                                       "type": "CODEPIPELINE",
-                                      "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"build\": {\n      \"commands\": [\n        \"yarn install\",\n        \"yarn build\"\n      ]\n    }\n  },\n  \"artifacts\": {\n    \"base-directory\": \"cdk.out\",\n    \"files\": \"**/*\"\n  }\n}"
+                                      "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"build\": {\n      \"commands\": [\n        \"yarn install\"\n      ]\n    }\n  },\n  \"artifacts\": {\n    \"base-directory\": \"cdk.out\",\n    \"files\": \"**/*\"\n  }\n}"
                                     },
                                     "encryptionKey": "alias/aws/s3"
                                   }
