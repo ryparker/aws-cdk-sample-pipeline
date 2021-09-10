@@ -6,7 +6,7 @@ import { ManualApprovalAction, GitHubSourceAction, CodeBuildAction } from '@aws-
 import { PolicyStatement, Effect } from '@aws-cdk/aws-iam';
 
 /**
- * Create a stack that implements a Pipeline using `@aws-cdk/aws-codepipeline`
+ * Create a stack that implements a `Pipeline` using `@aws-cdk/aws-codepipeline`
  */
 export default (scope: Construct) => {
   const stack = new Stack(scope, "AwsCodepipelinesStack");
@@ -40,7 +40,7 @@ export default (scope: Construct) => {
               'yarn install',
               'yarn run tsc',
               'yarn run cdk synth',
-              'yarn run cdk deploy --all'
+              'yarn run cdk deploy --all --require-approval never'
             ],
             rolePolicyStatements: [
               new PolicyStatement({
@@ -70,4 +70,4 @@ export default (scope: Construct) => {
       }
     ],
   });
-}
+};

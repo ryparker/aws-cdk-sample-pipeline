@@ -4,7 +4,7 @@ import { CodePipeline, ShellStep, CodePipelineSource, ManualApprovalStep, CodeBu
 import { Function, Code } from '@aws-cdk/aws-lambda';
 
 /**
- * Create a stack that implements a Pipeline using `@aws-cdk/pipelines`
+ * Create a stack that implements a `CodePipeline` using `@aws-cdk/pipelines`
  */
 export default (scope: Construct) => {
   const stack = new Stack(scope, "PipelinesStack");
