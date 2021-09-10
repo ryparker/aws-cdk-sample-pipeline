@@ -1,6 +1,6 @@
 import { App } from "@aws-cdk/core";
-import createPipelineUsingPipelines from './pipelines';
-import createPipelineUsingAwsCodepipeline from './aws-codepipeline';
+import createPipelineUsingPipelines from './stacks/pipelines';
+import createPipelineUsingAwsCodepipeline from './stacks/aws-codepipeline';
 
 const app = new App();
 

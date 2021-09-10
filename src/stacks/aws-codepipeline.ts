@@ -12,8 +12,8 @@ export default (scope: Construct) => {
 
   const sourceArtifact = new Artifact('SourceCode');
 
-  new Pipeline(stack, 'Pipeline-Using-AwsCodepipelinesStack', {
-    pipelineName: 'CustomPipeline',
+  new Pipeline(stack, 'Pipeline', {
+    pipelineName: 'Pipeline-Using-AwsCodepipelines',
     stages: [
       {
         stageName: 'Source',
@@ -39,7 +39,7 @@ export default (scope: Construct) => {
               'yarn install',
               'yarn run tsc',
               'yarn run cdk synth',
-              'yarn run cdk deploy'
+              'yarn run cdk deploy --all'
             ],
             runOrder: 1,
           })

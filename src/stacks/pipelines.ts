@@ -9,8 +9,8 @@ import { Function, Code } from '@aws-cdk/aws-lambda';
 export default (scope: Construct) => {
   const stack = new Stack(scope, "PipelinesStack");
 
-  const pipeline = new CodePipeline(stack, "Pipeline-Using-Pipelines", {
-    pipelineName: "MyPipeline",
+  const pipeline = new CodePipeline(stack, "Pipeline", {
+    pipelineName: "Pipeline-Using-Pipelines",
     selfMutation: false,
     synth: new ShellStep('Synth', {
       input: CodePipelineSource.gitHub('ryparker/aws-cdk-sample-pipeline', 'main'),
