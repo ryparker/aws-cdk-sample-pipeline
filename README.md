@@ -21,8 +21,8 @@ _This only needs to be ran once per account/region._
   yarn build
 ```
 
-**3. Deploy Cloudformation infrastructure to AWS account**
+**4. Deploy Cloudformation infrastructure to AWS account**
 
 ```shell
-  yarn deploy
+  yarn deploy --all
 ```
