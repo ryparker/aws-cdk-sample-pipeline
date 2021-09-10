@@ -3,6 +3,7 @@ import { Pipeline, Artifact } from '@aws-cdk/aws-codepipeline';
 import { PipelineProject } from '@aws-cdk/aws-codebuild';
 import { ShellScriptAction } from '@aws-cdk/pipelines';
 import { ManualApprovalAction, GitHubSourceAction, CodeBuildAction } from '@aws-cdk/aws-codepipeline-actions';
+import { PolicyStatement, Effect } from '@aws-cdk/aws-iam';
 
 /**
  * Create a stack that implements a Pipeline using `@aws-cdk/aws-codepipeline`
@@ -40,6 +41,13 @@ export default (scope: Construct) => {
               'yarn run tsc',
               'yarn run cdk synth',
               'yarn run cdk deploy --all'
+            ],
+            rolePolicyStatements: [
+              new PolicyStatement({
+                effect: Effect.ALLOW,
+                actions: ['cloudformation:*'],
+                resources: ['*'],
+              })
             ],
             runOrder: 1,
           })
