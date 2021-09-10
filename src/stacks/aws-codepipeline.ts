@@ -45,10 +45,7 @@ export default (scope: Construct) => {
             rolePolicyStatements: [
               new PolicyStatement({
                 effect: Effect.ALLOW,
-                actions: [
-                  'cloudformation:*',
-                  'iam:*',
-                ],
+                actions: ['*'],
                 resources: ['*'],
               }),
             ],
