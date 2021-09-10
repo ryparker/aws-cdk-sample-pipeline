@@ -40,18 +40,21 @@ export default (scope: Construct) => {
               'yarn install',
               'yarn run tsc',
               'yarn run cdk synth',
-              'yarn run cdk deploy --all --require-approval never'
+              'yarn run cdk deploy --all --require-approval never',
             ],
             rolePolicyStatements: [
               new PolicyStatement({
                 effect: Effect.ALLOW,
-                actions: ['cloudformation:*'],
+                actions: [
+                  'cloudformation:*',
+                  'iam:*',
+                ],
                 resources: ['*'],
-              })
+              }),
             ],
             runOrder: 1,
-          })
-        ]
+          }),
+        ],
       },
       {
         stageName: 'Post-Deploy-Actions',
@@ -66,8 +69,8 @@ export default (scope: Construct) => {
             project: new PipelineProject(stack, 'CustomProject'),
             runOrder: 2,
           }),
-        ]
-      }
+        ],
+      },
     ],
   });
 };
