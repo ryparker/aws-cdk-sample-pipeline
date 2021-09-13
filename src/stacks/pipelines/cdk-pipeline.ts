@@ -54,7 +54,7 @@ export default (scope: Construct) => {
       actionName: 'DockerBuildAndUploadToEcr',
       project: new PipelineProject(stack, 'DockerBuildAndUploadToEcr'),
       input: sourceArtifact,
-      role: new Role(scope, 'CodeBuildRole', {
+      role: new Role(stack, 'CodeBuildRole', {
         assumedBy: new ServicePrincipal('codebuild.amazonaws.com'),
         description: 'Role used for CodeBuild Projects',
         inlinePolicies: {
