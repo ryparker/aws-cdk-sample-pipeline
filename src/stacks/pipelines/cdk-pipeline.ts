@@ -52,9 +52,7 @@ export default (scope: Construct) => {
   assetsStage.addActions(
     new CodeBuildAction({
       actionName: 'DockerBuildAndUploadToEcr',
-      project: new PipelineProject(stack, 'DockerBuildAndUploadToEcr', {
-        buildSpec: BuildSpec.fromSourceFilename('images/buildspec.yml')
-      }),
+      project: new PipelineProject(stack, 'DockerBuildAndUploadToEcr'),
       input: sourceArtifact,
     })
   );
