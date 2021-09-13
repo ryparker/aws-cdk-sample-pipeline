@@ -1,9 +1,9 @@
 import { Construct, Stack, SecretValue } from "@aws-cdk/core";
 import { CdkPipeline, ShellScriptAction } from "@aws-cdk/pipelines";
-import { PipelineProject, BuildSpec } from '@aws-cdk/aws-codebuild';
+import { PipelineProject } from '@aws-cdk/aws-codebuild';
 import { ManualApprovalAction, GitHubSourceAction, CodeBuildAction } from '@aws-cdk/aws-codepipeline-actions';
 import { Artifact } from '@aws-cdk/aws-codepipeline';
-import { PolicyStatement, Effect } from '@aws-cdk/aws-iam';
+import { PolicyStatement, Effect, Role, ServicePrincipal, PolicyDocument } from '@aws-cdk/aws-iam';
 
 /**
  * Create a stack that implements a `CdkPipeline` using `@aws-cdk/pipelines`
@@ -54,6 +54,21 @@ export default (scope: Construct) => {
       actionName: 'DockerBuildAndUploadToEcr',
       project: new PipelineProject(stack, 'DockerBuildAndUploadToEcr'),
       input: sourceArtifact,
+      role: new Role(scope, 'CodeBuildRole', {
+        assumedBy: new ServicePrincipal('codebuild.amazonaws.com'),
+        description: 'Role used for CodeBuild Projects',
+        inlinePolicies: {
+          CodeBuildNestedCFNAccessPolicy: new PolicyDocument({
+            statements: [
+              new PolicyStatement({
+                effect: Effect.ALLOW,
+                actions: ['ecr:*'],
+                resources: ['*'],
+              }),
+            ],
+          }),
+        },
+      })
     })
   );
 
