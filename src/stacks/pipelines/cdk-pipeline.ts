@@ -17,7 +17,7 @@ export default (scope: Construct) => {
 
   const pipeline = new CdkPipeline(stack, "CdkPipeline", {
     pipelineName: "CdkPipeline-Using-Pipelines",
-    selfMutating: true,
+    selfMutating: false,
     cloudAssemblyArtifact: cloudAssemblyArtifact,
     sourceAction: new GitHubSourceAction({
       actionName: 'GitHub',
@@ -48,7 +48,7 @@ export default (scope: Construct) => {
     }),
   });
 
-  const assetsStage = pipeline.addStage('Assets');
+  const assetsStage = pipeline.addStage('DockerAssets');
   assetsStage.addActions(
     new CodeBuildAction({
       actionName: 'DockerBuildAndUploadToEcr',
@@ -66,24 +66,4 @@ export default (scope: Construct) => {
       runOrder: 1,
     }),
   );
-
-  // const wave = pipeline.addStage('LambdaWave', {
-  //   pre: [new ManualApprovalStep('ManualApproval')],
-  //   post: [
-  //     new CodeBuildStep('CustomWaveAction', {
-  //       projectName: 'CustomWaveActionBuild',
-  //       commands: [
-  //         'echo Hello World'
-  //       ],
-  //     })],
-  // });
-
-  // const lambdaStage = new Stage(stack, 'LambdaStage');
-  // const lambdaStack = new Stack(lambdaStage, 'lambdaStack');
-  // new Function(lambdaStack, 'MyFunction', {
-  //   code: Code.fromInline('console.log("hello world");'),
-  //   runtime: Runtime.NODEJS_14_X,
-  //   handler: 'index.handler',
-  // });
-  // wave.addStage(lambdaStage);
 };
