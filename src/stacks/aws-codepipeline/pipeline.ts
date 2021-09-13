@@ -13,7 +13,7 @@ export default (scope: Construct) => {
 
   const sourceArtifact = new Artifact('SourceCode');
 
-  new Pipeline(stack, 'Pipeline', {
+  const pipeline = new Pipeline(stack, 'AwsCodepipeline', {
     pipelineName: 'Pipeline-Using-AwsCodepipelines',
     stages: [
       {
@@ -40,7 +40,7 @@ export default (scope: Construct) => {
               'yarn install',
               'yarn run tsc',
               'yarn run cdk synth',
-              'yarn run cdk deploy --all --require-approval never',
+              'yarn run cdk deploy AwsCodepipeline --require-approval never',
             ],
             rolePolicyStatements: [
               new PolicyStatement({

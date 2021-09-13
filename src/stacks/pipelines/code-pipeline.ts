@@ -1,17 +1,19 @@
 import { Runtime } from '@aws-cdk/aws-lambda';
-import { Construct, Stack, Stage } from "@aws-cdk/core";
+import { Construct, Stack, Stage, Aspects, IAspect, IConstruct } from "@aws-cdk/core";
 import { CodePipeline, ShellStep, CodePipelineSource, ManualApprovalStep, CodeBuildStep } from "@aws-cdk/pipelines";
+import { CodeBuildAction } from '@aws-cdk/aws-codepipeline-actions'
+import { PipelineProject } from '@aws-cdk/aws-codebuild';
 import { Function, Code } from '@aws-cdk/aws-lambda';
 
 /**
  * Create a stack that implements a `CodePipeline` using `@aws-cdk/pipelines`
  */
 export default (scope: Construct) => {
-  const stack = new Stack(scope, "PipelinesStack");
+  const stack = new Stack(scope, "CodePipelineStack");
 
-  const pipeline = new CodePipeline(stack, "Pipeline", {
-    pipelineName: "Pipeline-Using-Pipelines",
-    selfMutation: false,
+  const pipeline = new CodePipeline(stack, "CodePipeline", {
+    pipelineName: "CodePipeline-Using-Pipelines",
+    selfMutation: true,
     synth: new ShellStep('Synth', {
       input: CodePipelineSource.gitHub('ryparker/aws-cdk-sample-pipeline', 'main'),
       commands: [
