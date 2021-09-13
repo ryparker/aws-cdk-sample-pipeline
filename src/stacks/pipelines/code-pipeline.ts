@@ -13,7 +13,7 @@ export default (scope: Construct) => {
 
   const pipeline = new CodePipeline(stack, "CodePipeline", {
     pipelineName: "CodePipeline-Using-Pipelines",
-    selfMutation: true,
+    selfMutation: false,
     synth: new ShellStep('Synth', {
       input: CodePipelineSource.gitHub('ryparker/aws-cdk-sample-pipeline', 'main'),
       commands: [

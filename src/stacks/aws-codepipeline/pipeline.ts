@@ -40,7 +40,7 @@ export default (scope: Construct) => {
               'yarn install',
               'yarn run tsc',
               'yarn run cdk synth',
-              'yarn run cdk deploy AwsCodepipeline --require-approval never',
+              'yarn run cdk deploy AwsCodepipelineStack --require-approval never',
             ],
             rolePolicyStatements: [
               new PolicyStatement({
